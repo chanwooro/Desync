@@ -3,6 +3,7 @@
     "description": "This is for private website project. This plugin is dsync-dsync-magento and this is just to change php version requirement",
     "type": "magento2-module",
     "version": "1.0.0",
+    "minimum-stability": "stable",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
