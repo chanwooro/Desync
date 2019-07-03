@@ -1,11 +1,11 @@
 {
-    "name": "dsync/dsync-magento-2",
-    "description": "Dsync module for Magento 2",
+    "name": "chanwooro/vendella",
+    "description": "This is for private website project. This plugin is dsync-dsync-magento and this is just to change php version requirement",
     "require": {
         "magento/framework": "~102.0"
     },
     "type": "magento2-module",
-    "version": "101.0.1",
+    "version": "1.0.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
