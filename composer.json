@@ -1,9 +1,6 @@
 {
     "name": "chanwooro/vendella",
     "description": "This is for private website project. This plugin is dsync-dsync-magento and this is just to change php version requirement",
-    "require": {
-        "magento/framework": "~102.0"
-    },
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [
