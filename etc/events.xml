@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_save_before">
+        <observer name="dsync_customer_save_before" instance="Dsync\Dsync\Observer\CheckCustomerObserver" />
+    </event>
+    <event name="customer_address_save_before">
+        <observer name="dsync_customer_address_save_before" instance="Dsync\Dsync\Observer\CheckCustomerAddressObserver" />
+    </event>
+    <event name="catalog_product_save_before">
+        <observer name="dsync_catalog_product_save_before" instance="Dsync\Dsync\Observer\CheckProductObserver" />
+    </event>
+    <event name="catalog_entity_attribute_save_before">
+        <observer name="dsync_catalog_entity_attribute_save_before" instance="Dsync\Dsync\Observer\Product\CheckAttributeObserver" />
+    </event>
+    <event name="cataloginventory_stock_item_save_before">
+        <observer name="dsync_cataloginventory_stock_item_save_before" instance="Dsync\Dsync\Observer\CheckInventoryObserver" />
+    </event>
+    <event name="dsync_cataloginventory_stock_item_resource_save_before">
+        <observer name="dsync_cataloginventory_stock_item_save_before" instance="Dsync\Dsync\Observer\CheckInventoryObserver" />
+    </event>
+    <event name="sales_order_save_before">
+        <observer name="dsync_sales_order_save_before" instance="Dsync\Dsync\Observer\CheckOrderObserver" />
+    </event>
+    <event name="sales_order_status_history_save_before">
+        <observer name="dsync_sales_order_status_history_save_before" instance="Dsync\Dsync\Observer\Order\CheckCommentObserver" />
+    </event>
+    <event name="sales_order_shipment_save_before">
+        <observer name="dsync_sales_order_shipment_save_before" instance="Dsync\Dsync\Observer\CheckShipmentObserver" />
+    </event>
+    <event name="sales_order_shipment_comment_save_before">
+        <observer name="dsync_sales_order_shipment_comment_save_before" instance="Dsync\Dsync\Observer\Shipment\CheckCommentObserver" />
+    </event>
+    <event name="dsync_backend_media_create">
+        <observer name="dsync_backend_media_create" instance="Dsync\Dsync\Observer\Product\CheckImageObserver" />
+    </event>
+
+    <event name="customer_save_after">
+        <observer name="dsync_customer_save_after" instance="Dsync\Dsync\Observer\UpdateCustomerObserver" />
+    </event>
+    <event name="customer_address_save_after">
+        <observer name="dsync_customer_address_save_after" instance="Dsync\Dsync\Observer\UpdateCustomerAddressObserver" />
+    </event>
+    <event name="catalog_product_save_after">
+        <observer name="dsync_catalog_product_save_after" instance="Dsync\Dsync\Observer\UpdateProductObserver" />
+    </event>
+    <event name="catalog_entity_attribute_save_after">
+        <observer name="dsync_catalog_entity_attribute_save_after" instance="Dsync\Dsync\Observer\Product\UpdateAttributeObserver" />
+    </event>
+    <event name="cataloginventory_stock_item_save_after">
+        <observer name="dsync_cataloginventory_stock_item_save_after" instance="Dsync\Dsync\Observer\UpdateInventoryObserver" />
+    </event>
+    <event name="dsync_cataloginventory_stock_item_resource_save_after">
+        <observer name="dsync_cataloginventory_stock_item_save_after" instance="Dsync\Dsync\Observer\UpdateInventoryObserver" />
+    </event>
+    <event name="dsync_cataloginventory_stock_item_updater">
+        <observer name="dsync_cataloginventory_stock_item_updater" instance="Dsync\Dsync\Observer\UpdateInventoryObserver" />
+    </event>
+    <event name="dsync_stock_items_update">
+        <observer name="dsync_stock_items_update" instance="Dsync\Dsync\Observer\UpdateStockItemsObserver" />
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="dsync_sales_order_save_after" instance="Dsync\Dsync\Observer\UpdateOrderObserver" />
+    </event>
+    <event name="dsync_sales_order_updater">
+        <observer name="dsync_sales_order_save_after" instance="Dsync\Dsync\Observer\UpdateOrderObserver" />
+    </event>
+    <event name="sales_order_status_history_save_after">
+        <observer name="dsync_sales_order_status_history_save_after" instance="Dsync\Dsync\Observer\Order\UpdateCommentObserver" />
+    </event>
+    <event name="sales_order_shipment_save_after">
+        <observer name="dsync_sales_order_shipment_save_after" instance="Dsync\Dsync\Observer\UpdateShipmentObserver" />
+    </event>
+    <event name="dsync_sales_order_shipment_updater">
+        <observer name="dsync_sales_order_shipment_updater" instance="Dsync\Dsync\Observer\UpdateShipmentObserver" />
+    </event>
+    <event name="sales_order_shipment_comment_save_after">
+        <observer name="dsync_sales_order_shipment_comment_save_after" instance="Dsync\Dsync\Observer\Shipment\UpdateCommentObserver" />
+    </event>
+    <event name="sales_order_shipment_track_save_after">
+        <observer name="dsync_sales_order_shipment_track_save_after" instance="Dsync\Dsync\Observer\Shipment\UpdateTrackObserver" />
+    </event>
+    <event name="giftmessage_message_save_after">
+        <observer name="dsync_giftmessage_message_save_after" instance="Dsync\Dsync\Observer\UpdateGiftMessageObserver" />
+    </event>
+
+    <event name="customer_delete_after">
+        <observer name="dsync_customer_delete_after" instance="Dsync\Dsync\Observer\DeleteCustomerObserver" />
+    </event>
+    <event name="customer_address_delete_after">
+        <observer name="dsync_customer_address_delete_after" instance="Dsync\Dsync\Observer\DeleteCustomerAddressObserver" />
+    </event>
+    <event name="catalog_product_delete_after">
+        <observer name="dsync_catalog_product_delete_after" instance="Dsync\Dsync\Observer\DeleteProductObserver" />
+    </event>
+    <event name="catalog_entity_attribute_delete_after">
+        <observer name="dsync_catalog_entity_attribute_delete_after" instance="Dsync\Dsync\Observer\Product\DeleteAttributeObserver" />
+    </event>
+    <event name="cataloginventory_stock_item_delete_after">
+        <observer name="dsync_cataloginventory_stock_item_delete_after" instance="Dsync\Dsync\Observer\DeleteInventoryObserver" />
+    </event>
+    <event name="sales_order_delete_after">
+        <observer name="dsync_sales_order_delete_after" instance="Dsync\Dsync\Observer\DeleteOrderObserver" />
+    </event>
+    <event name="sales_order_shipment_delete_after">
+        <observer name="dsync_sales_order_shipment_delete_after" instance="Dsync\Dsync\Observer\DeleteShipmentObserver" />
+    </event>
+    <event name="sales_order_shipment_track_delete_after">
+        <observer name="dsync_sales_order_shipment_track_delete_after" instance="Dsync\Dsync\Observer\Shipment\UpdateTrackObserver" />
+    </event>
+    <event name="dsync_backend_media_delete">
+        <observer name="dsync_backend_media_delete" instance="Dsync\Dsync\Observer\Product\DeleteImageObserver" />
+    </event>
+</config>

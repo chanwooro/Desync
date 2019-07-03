@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="dsync">
+        <job name="dsync_retry_processes" instance="Dsync\Dsync\Cron\RetryProcesses" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+        <job name="dsync_send_notifications" instance="Dsync\Dsync\Cron\SendNotifications" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+        <job name="dsync_check_errors" instance="Dsync\Dsync\Cron\CheckErrors" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+        <job name="dsync_clean_data" instance="Dsync\Dsync\Cron\CleanData" method="execute">
+            <schedule>*/10 * * * *</schedule>
+        </job>
+    </group>
+</config>

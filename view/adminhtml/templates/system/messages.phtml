@@ -1,0 +1,29 @@
+<?php
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
+<?php /* @var $block \Dsync\Dsync\Block\Adminhtml\System\Messages */ ?>
+
+<div id="system_messages" class="message-system">
+    <div class="message-system-inner">
+            <ul class="message-system-list">
+                <li class="message message-warning error">
+                    <strong><?php echo __('Dsync:')?></strong> <?php echo __('Synchronization Error')?>
+                </li>
+            </ul>
+        <div class="message-system-short">
+            <span class="message-system-short-label">
+                <?php echo __('Synchronization Errors:')?>
+            </span>
+                <div class="message message-warning error">
+                    <a class="message-link" href="<?php echo $block->getProcessUrl();?>" title="<?php echo $block->escapeHtml(__('Synchronization Errors'));?>">
+                        <?php echo $block->getErrors();?>
+                    </a>
+                </div>
+            <span class="dsync-message-action"><a href="<?php echo $block->getProcessUrl();?>"><?php echo $block->escapeHtml(__('View'));?></a> | <a href="<?php echo $block->getDismissUrl();?>"><?php echo $block->escapeHtml(__('Dismiss'));?></a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="dsync" frontName="dsync">
+            <module name="Dsync_Dsync" />
+        </route>
+    </router>
+</config>

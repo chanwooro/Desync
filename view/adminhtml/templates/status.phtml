@@ -1,0 +1,65 @@
+<?php /* @var $block \Dsync\Dsync\Block\Adminhtml\Process\Edit\Tab\Status */ ?>
+<?php /* Process Status Information */?>
+
+<section class="admin__page-section process-edit-status">
+    <div class="admin__page-section-title">
+        <span class="title"><?php echo $block->getSectionTitle(); ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item process-status">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php echo __('Status') ?> (<span>Process ID# <?php echo $block->getProcess()->getId(); ?></span>)
+                </span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary process-status-table">
+                <tr>
+                    <th><?php echo __('Request Status'); ?></th>
+                    <td><span><strong><?php echo ucwords($block->getStatusLabel()); ?></strong></span></td>
+                </tr>
+                <tr>
+                    <th><?php echo __('Request Type'); ?></th>
+                    <td><span><strong><?php echo ucwords($block->getRequestType()); ?></strong></span></td>
+                </tr>
+                <tr>
+                    <th><?php echo __('Entity'); ?></th>
+                    <td><span><strong><?php echo ucwords($block->getProcess()->getEntityType()); ?></strong></span></td>
+                </tr>
+                <?php if ($block->getProcess()->getProcessId()): ?>
+                <tr>
+                    <th><?php echo __('Dsync Process ID'); ?></th>
+                    <td><span><strong><?php echo $block->getProcess()->getProcessId(); ?></strong></span></td>
+                </tr>
+                <?php endif; ?>
+                <?php if ($block->getProcess()->getDsyncEntityId()): ?>
+                <tr>
+                    <th><?php echo __('Dsync ID'); ?></th>
+                    <td><span><strong><?php echo $block->getProcess()->getDsyncEntityId(); ?></strong></span></td>
+                </tr>
+                <?php endif; ?>
+                <?php if ($block->getProcess()->getDsyncEntityIdField()): ?>
+                <tr>
+                    <th><?php echo __('Dsync Field'); ?></th>
+                    <td><span><strong><?php echo $block->getProcess()->getDsyncEntityIdField(); ?></strong></span></td>
+                </tr>
+                <?php endif; ?>
+                <?php if ($block->getProcess()->getMessage()): ?>
+                <tr>
+                    <th><?php echo __('Message'); ?></th>
+                    <td><span><strong><?php echo $block->getProcess()->getMessage(); ?></strong></span></td>
+                </tr>
+                <?php endif; ?>
+                <tr>
+                    <th><?php echo __('Created At'); ?></th>
+                    <td><span><strong><?php echo $block->formatProcessDate($block->getProcess()->getCreatedAt()); ?></strong></span></td>
+                </tr>
+                <tr>
+                    <th><?php echo __('Updated At'); ?></th>
+                    <td><span><strong><?php echo $block->formatProcessDate($block->getProcess()->getUpdatedAt()); ?></strong></span></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+</section>

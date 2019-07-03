@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Dsync_Dsync::css/styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="notifications">
+            <block class="Dsync\Dsync\Block\Adminhtml\System\Messages" name="dsync_system_messages" as="dsync_system_messages" after="system_messages" template="system/messages.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

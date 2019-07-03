@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <dsync>
+            <module_config>
+                <active><![CDATA[0]]></active>
+                <system_type><![CDATA[2]]></system_type>
+                <process_grid_filter><![CDATA[1,2,3,4,5,6,7]]></process_grid_filter>
+                <endpoint><![CDATA[https://api.dsync.com/api/realtime]]></endpoint>
+                <endpoint_stage><![CDATA[https://app-stage.dsync.com/api/realtime]]></endpoint_stage>
+                <max_retries><![CDATA[3]]></max_retries>
+            </module_config>
+            <mass_sync>
+                <page_size><![CDATA[100]]></page_size>
+            </mass_sync>
+            <data_config>
+                <cleaning><![CDATA[1]]></cleaning>
+                <cleaning_minutes><![CDATA[60]]></cleaning_minutes>
+            </data_config>
+        </dsync>
+    </default>
+</config>

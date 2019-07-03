@@ -1,0 +1,27 @@
+<?php
+/**
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<script>
+require([
+    'jquery',
+    'dsyncPrimaryKeys',
+    'domReady!'
+], function ($, dsyncPrimaryKeys) {
+    'use strict';
+
+    dsyncPrimaryKeys.disableKeys();
+
+    $("#dsync_button_unlock_keys").click(function() {
+        if (confirm("<?php echo __('Are you sure that you want to unlock the primary keys?'); ?>")) {
+            dsyncPrimaryKeys.enableKeys();
+        }
+    });
+});
+</script>

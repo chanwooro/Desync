@@ -1,0 +1,26 @@
+<?php /* @var $block \Dsync\Dsync\Block\Adminhtml\Process\Edit\Tab\Request */ ?>
+<?php /* Request Information */?>
+<section class="admin__page-section process-edit-request">
+    <div class="admin__page-section-title">
+        <span class="title"><?php echo $block->getSectionTitle(); ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item process-request">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php echo __('Request'); ?> (<span>Process ID# <?php echo $block->getProcess()->getId(); ?></span>)
+                </span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary process-request-table">
+                <tr>
+                    <td>
+                        <textarea cols="15" rows="15" class="" name="request-information" id="request_information" style="width: 100%;"><?php echo $block->getPrettyRequest(); ?>
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+</section>

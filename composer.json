@@ -1,0 +1,21 @@
+{
+    "name": "dsync/dsync-magento-2",
+    "description": "Dsync module for Magento 2",
+    "require": {
+        "magento/framework": "~102.0"
+    },
+    "type": "magento2-module",
+    "version": "101.0.1",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Dsync\\Dsync\\": ""
+        }
+    }
+}

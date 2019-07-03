@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Dsync_Dsync::dsync" title="Dsync" dependsOnModule="Dsync_Dsync" module="Dsync_Dsync" sortOrder="80" resource="Dsync_Dsync::dsync"/>
+        <add id="Dsync_Dsync::dsync_process" title="Process Notifications" module="Dsync_Dsync" sortOrder="10" parent="Dsync_Dsync::dsync" action="dsync/process" resource="Dsync_Dsync::process" />
+        <add id="Dsync_Dsync::dsync_settings" title="Settings" module="Dsync_Dsync" sortOrder="20" parent="Dsync_Dsync::dsync" action="adminhtml/system_config/edit/section/dsync" resource="Dsync_Dsync::config_dsync" />
+   	</menu>
+</config>
